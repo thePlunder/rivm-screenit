@@ -15,6 +15,7 @@
 
     <modules>
         <module>commons</module>
+        <module>rest</module>
     </modules>
 
 
