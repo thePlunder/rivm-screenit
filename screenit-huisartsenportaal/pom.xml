@@ -6,10 +6,16 @@
         <artifactId>screenit-parent</artifactId>
         <groupId>nl.rivm.screenit</groupId>
         <relativePath>../pom.xml</relativePath>
+        <version>1.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>screenit-huisartsenportaal</artifactId>
     <packaging>pom</packaging>
     <name>screenit-huisartsenportaal</name>
+
+    <modules>
+        <module>commons</module>
+    </modules>
+
 
 </project>

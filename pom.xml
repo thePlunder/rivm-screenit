@@ -5,11 +5,12 @@
     <artifactId>screenit-parent</artifactId>
     <packaging>pom</packaging>
     <name>screenit-parent</name>
+    <version>1.0-SNAPSHOT</version>
 
-    <parent>
-        <groupId>nl.topicuszorg</groupId>
-        <artifactId>parent</artifactId>
-    </parent>
+<!--    <parent>-->
+<!--        <groupId>nl.topicuszorg</groupId>-->
+<!--        <artifactId>parent</artifactId>-->
+<!--    </parent>-->
 
     <organization>
         <name>Facilitaire Samenwerking Bevolkingsonderzoek</name>
@@ -17,6 +18,11 @@
     </organization>
 
     <inceptionYear>2012</inceptionYear>
+
+    <modules>
+<!--        <module>screenit-base</module>-->
+        <module>screenit-huisartsenportaal</module>
+    </modules>
 
     <build>
         <pluginManagement>
@@ -114,32 +120,32 @@
                 <configuration>
 
                     <release>${java.version}</release>
-                    <source>${maven.compiler.source}</source>
-                    <target>${maven.compiler.target}</target>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                    <annotationProcessorPaths>
-                        <path>
-                            <groupId>org.springframework.boot</groupId>
-                            <artifactId>spring-boot-configuration-processor</artifactId>
-                        </path>
-                        <path>
-                            <groupId>org.mapstruct</groupId>
-                            <artifactId>mapstruct-processor</artifactId>
-                        </path>
-                        <path>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok-mapstruct-binding</artifactId>
-                        </path>
-                        <path>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </path>
-                    </annotationProcessorPaths>
-                    <compilerArgs>
-                        <arg>
-                            -Amapstruct.unmappedTargetPolicy=ERROR
-                        </arg>
-                    </compilerArgs>
+                    <source>17</source>
+                    <target>17</target>
+<!--                    <encoding>${project.build.sourceEncoding}</encoding>-->
+<!--                    <annotationProcessorPaths>-->
+<!--                        <path>-->
+<!--                            <groupId>org.springframework.boot</groupId>-->
+<!--                            <artifactId>spring-boot-configuration-processor</artifactId>-->
+<!--                        </path>-->
+<!--                        <path>-->
+<!--                            <groupId>org.mapstruct</groupId>-->
+<!--                            <artifactId>mapstruct-processor</artifactId>-->
+<!--                        </path>-->
+<!--                        <path>-->
+<!--                            <groupId>org.projectlombok</groupId>-->
+<!--                            <artifactId>lombok-mapstruct-binding</artifactId>-->
+<!--                        </path>-->
+<!--                        <path>-->
+<!--                            <groupId>org.projectlombok</groupId>-->
+<!--                            <artifactId>lombok</artifactId>-->
+<!--                        </path>-->
+<!--                    </annotationProcessorPaths>-->
+<!--                    <compilerArgs>-->
+<!--                        <arg>-->
+<!--                            -Amapstruct.unmappedTargetPolicy=ERROR-->
+<!--                        </arg>-->
+<!--                    </compilerArgs>-->
                 </configuration>
             </plugin>
             <plugin>
@@ -308,11 +314,19 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <version>1.18.28</version>
         </dependency>
 
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
+            <version>2.0.1.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.9.3</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
